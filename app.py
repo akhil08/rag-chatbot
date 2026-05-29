@@ -138,7 +138,10 @@ if uploaded_file or website_url:
             chunk_overlap=100
         )
 
-        combined_text = text + "\n" + website_text
+        if uploaded_file:
+            combined_text = text
+        else:
+            combined_text = website_text
 
         chunks = text_splitter.split_text(
             combined_text
