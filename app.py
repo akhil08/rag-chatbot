@@ -41,6 +41,8 @@ website_url = st.text_input(
 website_text = ""
 
 if website_url:
+    # Clear old chat history
+    st.session_state.messages = []
 
     try:
 
