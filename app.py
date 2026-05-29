@@ -129,7 +129,7 @@ if uploaded_file or website_url:
         for page in pdf_reader.pages:
             text += page.extract_text()
 
-    @st.cache_resource
+    # @st.cache_resource
     def create_vectorstore(text):
 
         # Split text
